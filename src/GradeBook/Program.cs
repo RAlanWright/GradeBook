@@ -7,9 +7,6 @@ namespace GradeBook
     {
         static void Main(string[] args)
         {
-            // double[] numbers = new double[3];
-            // var numbers = new[] {12.7, 41.5, 23.9};
-            
             var grades = new List<double>() {79.8, 100.0, 92.3};
             grades.Add(88.5);
 
@@ -18,15 +15,13 @@ namespace GradeBook
             {
                 result += number;
             }
-            
-            var average = 0.0;
-            average = result / grades.Count;
-            Console.WriteLine(average);
 
+            result /= grades.Count;
+            Console.WriteLine($"The average grade is: {result:N1}!");
 
             if (args.Length > 0)
             {
-            Console.WriteLine($"Hello {args[0]}!");
+            Console.WriteLine($"Hello, {args[0]}!");
             }
             else
             {
